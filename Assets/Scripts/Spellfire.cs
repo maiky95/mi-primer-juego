@@ -14,14 +14,19 @@ public class Spellfire : MonoBehaviour
         rb.velocity = transform.right * speed;
     }
 
-    void OnTriggeEnter2D (Collider2D hitInfo)
+    private void OnTriggerEnter2D (Collider2D hitInfo)
     {
-        enemyhealth enemy = hitInfo.GetComponent<enemyhealth>();
+        EnemyController enemy = hitInfo.GetComponent<EnemyController>();
         if (enemy != null)
         {
             enemy.TakeDamage(damage);
+            Destroy(gameObject);
         }
-        Destroy(gameObject);
+        else
+        {
+            Destroy(gameObject, 1.5f);
+        }
+        
     }
 
     

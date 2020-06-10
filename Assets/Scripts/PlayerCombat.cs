@@ -21,7 +21,7 @@ public class PlayerCombat : MonoBehaviour
         }
        
     }
-    void Attack()
+    private void Attack()
     {
         //Play an attack animation
         animator.SetTrigger("Attack");
@@ -32,13 +32,13 @@ public class PlayerCombat : MonoBehaviour
         //Damage them
         foreach(Collider2D enemy in hitEnemies)
         {
-            enemy.GetComponent<enemyhealth>().TakeDamage(attackDamage);
+            if(enemy.gameObject.CompareTag("Enemy"))
+                enemy.GetComponent<EnemyController>().TakeDamage(attackDamage);
         }
     }
 
     void OnDrawGizmosSelected()
     {
-
 
         Gizmos.DrawWireSphere(attackPoint.position, attackRange);
     }

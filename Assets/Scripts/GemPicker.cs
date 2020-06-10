@@ -11,7 +11,7 @@ public class GemPicker : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.transform.tag == "gem")
+        if (other.transform.CompareTag("gem"))
         {
             gems++;
             textGems.text = gems.ToString();
