@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1700045145683093468}
   - component: {fileID: 5807697093427425474}
   - component: {fileID: 5749416916788807391}
+  - component: {fileID: 7662076501920175775}
   m_Layer: 0
   m_Name: spellfire
   m_TagString: Untagged
@@ -136,3 +137,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 21.3
   rb: {fileID: 1700045145683093468}
+  damage: 10
+--- !u!95 &7662076501920175775
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7235509655970900117}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6abc95d8e2f9fd64bbf5c2496b24a6ec, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
