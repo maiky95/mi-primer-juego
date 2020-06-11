@@ -53,4 +53,9 @@ public class playermovement : MonoBehaviour
         animator.SetBool("IsCrouching", isCrouching);
     }
 
+    private void OnBecameInvisible()
+    {
+        transform.position = new Vector3(-15,-2, 0);
+    }
+
 }
