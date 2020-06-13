@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3106863377809681060}
   m_Layer: 0
   m_Name: esmeralda1 1
-  m_TagString: emerald
+  m_TagString: Emerald
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

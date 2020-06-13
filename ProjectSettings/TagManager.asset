@@ -4,10 +4,10 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - gem
-  - emerald
   - Enemy
   - cherry
+  - Emerald
+  - Gem
   layers:
   - Default
   - TransparentFX
