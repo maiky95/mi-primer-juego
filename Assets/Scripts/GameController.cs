@@ -53,23 +53,27 @@ public class GameController : MonoBehaviour
         }
     }
 
-    public void HandlePickup(GameObject obj)
+    public void HandlePickable(Constants.Pickable tag)
     {
-        switch (obj.tag)
+        switch (tag)
         {
-            case "Gem":
+            case Constants.Pickable.Gem:
                 Gems++;
                 textGems.text = Gems.ToString();
-                Destroy(obj);
                 break;
-            case "Emerald":
+            case Constants.Pickable.Emerald:
                 Emeralds++;
                 textEmeralds.text = Emeralds.ToString();
-                Destroy(obj);
+                break;
+            case Constants.Pickable.Cherry:
+                LifePoints = Mathf.Clamp(LifePoints + Constants.CherryHealthRecovery, 0, MaxLifePoints);
+                healthBar.SetHealth(LifePoints);
                 break;
             default:
                 break;
+
         }
+
     }
 
 }

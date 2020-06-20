@@ -52,13 +52,6 @@ public class PlayerController : MonoBehaviour
         animator.SetBool("IsCrouching", isCrouching);
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (!collision.CompareTag("Untagged"))
-        {
-            GameController.Instance.HandlePickup(collision.gameObject);
-        }
-    }
 
     /*private void OnBecameInvisible()
     {

@@ -6,6 +6,7 @@ public class CameraFollow : MonoBehaviour
 {
 
     public GameObject follow;
+    public Vector2 Offset;
     public Vector2 minCameraPos, maxCameraPos;
     public float smoothTime;
 
@@ -26,8 +27,8 @@ public class CameraFollow : MonoBehaviour
             smoothTime);
 
         transform.position = new Vector3(
-            Mathf.Clamp(positionX,minCameraPos.x,maxCameraPos.x),
-            Mathf.Clamp(positionY, minCameraPos.y, maxCameraPos.y), 
+            Mathf.Clamp(positionX + Offset.x,minCameraPos.x,maxCameraPos.x),
+            Mathf.Clamp(positionY + Offset.y, minCameraPos.y, maxCameraPos.y), 
             transform.position.z);
 
     }
